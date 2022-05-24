@@ -15,7 +15,7 @@ func main() {
 		c.File("Robert Mulyukov.pdf")
 	})
 
-	fmt.Printf("Starting server at port 8080\n")
+	fmt.Printf("Starting server at port %s\n", os.Getenv("PORT"))
 	if err := http.ListenAndServe(os.Getenv("PORT"), router); err != nil {
 		log.Fatal(err)
 	}
