@@ -11,7 +11,7 @@ import (
 func main() {
 	router := gin.Default()
 
-	router.GET("/*any", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		c.File("Robert Mulyukov.pdf")
 	})
 
