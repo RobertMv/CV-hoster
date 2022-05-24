@@ -16,7 +16,7 @@ func main() {
 	})
 
 	fmt.Printf("Starting server at port %s\n", os.Getenv("PORT"))
-	if err := http.ListenAndServe(os.Getenv("PORT"), router); err != nil {
+	if err := http.ListenAndServe(":"+os.Getenv("PORT"), router); err != nil {
 		log.Fatal(err)
 	}
 }
